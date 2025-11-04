@@ -1,8 +1,11 @@
-﻿image bg hole = im.Scale("bg_hole.png", 1920, 1080)
-image bg bedroom = im.Scale("bg_bedroom.png", 1920, 1080)
-image bg kitchen = im.Scale("bg_kitchen.png", 1920, 1080)
-image bg rest_room = im.Scale("bg_rest_room.png", 1920, 1080)
-image bg toilet = im.Scale("bg_toilet.png", 1920, 1080)
+﻿# Scene
+image bg airport = im.Scale("scene_airport.jpg", 1920, 1080)
+image bg school = im.Scale("scene_school.jpg", 1920, 1080)
+image bg hero_room = im.Scale("scene_hero_room.jpg", 1920, 1080)
+image bg maksim_room = im.Scale("scene_maksim_room.jpg", 1920, 1080)
+image bg rest_room = im.Scale("scene_rest_room.jpg", 1920, 1080)
+image bg kitchen_room = im.Scale("scene_kitchen_room.jpg", 1920, 1080)
+image bg bath_room = im.Scale("scene_bathroom.jpg", 1920, 1080)
 
 # Ariel
 image ariel happy = im.Scale("ariel_happy.png", 700, 1000)
@@ -59,29 +62,98 @@ image maks sad = im.Scale("maks_sad.png", 700, 1000)
 image maks shy = im.Scale("maks_shy.png", 700, 1000)
 define Maksim = Character("Maksim", color = "#00f3aa")
 
+# Sushi
 
+# Aya
+
+# Radeon
+
+# Alex
+
+# Nadejda
+
+# audio
+# play sound "audio/airport_sound.mp3"
+# play sound "audio/car_alert_sound.mp3"
+# play sound "audio/car_onmove_sound.mp3"
+# play sound "audio/close_bagspot_sound_sound.mp3"
 label start:
-    scene bg bedroom
-    show ariel happy at center
-    with fade
-    Ariel "Добро пожаловать на альфа тест игры"
-    Ariel "Знакомьтесь с нашим составом"
+    play music "audio/airport_sound.mp3"
+    scene bg airport with fade
+    "....."
+    "Где эта аболтуска..."
+    "Вылетела первой из самолёта и убежала..."
+    "Кто вообще так делает."
+    "......."
+    show maks fck with dissolve
+    "И кого ты аболтуской назвал?"
+    "Тебя."
+    "Хм."
+    show maks neitral with dissolve
+    "И вообще Максим ты в чужой стране, веди себя как леди..."
+    Maksim "От кого я это слышу? А, братец"
+    "Вы" "В любом случае нам ждёт такси, идём."
 
-    show liliya happy at left
-    with dissolve
-    Ariel "Лилия"
+    hide maks neitral with dissolve
+    hide bg airport with fade
+    stop music
+    play sound "audio/car_onmove_sound.mp3"
 
-    show lilit happy at right
-    with dissolve
-    Ariel "Лилит"
+    "Я был слишком усталым и даже непомню как мы загрузились и поехали, но этот звук езды..."
+    "Как же я люблю этот звук, почему то он даёт чувство спокойствия."
+    "Наверное, я могу ещё подрем..."
 
-    hide liliya happy
-    hide lilit happy
+    stop sound
+    play sound "audio/close_bagspot_sound_sound.mp3"
+    play sound "audio/car_alert_sound.mp3"
 
-    show shaya happy at left
-    with dissolve
-    Ariel "Шая"
+    show maks confused with dissolve
+    "Вставай, АЛЁ ОЛЕНЬ"
+    "НУ ЖЕ ВСТАВАЙ"
+    show maks smile with dissolve
+    "ТЫ ПРОПУСТИШЬ КРАСИВУЮ МИЛФУ НА ВХОДЕ"
+    "Вы" "Максим успокойся, меня этим не разбудить"
+    Maksim "И тем неменее ты мне ответил."
 
-    show maks happy at right
-    with dissolve
-    Ariel "Максим"
+    hide maks smile with dissolve
+    stop sound
+
+    "Как же хреново что родители заставили меня за двоюродной сестрой приглядывать, от баб одни проблемы."
+    Maksim "Чё ты недовольный такой?"
+    "Вы" "Что?"
+    Maksim "Говорю, чё мина кислая то? Сосал?"
+    "Вы" "Да, я уста... Ты в край охренела?"
+    Maksim "Да ладно успокойся, яж любя."
+    
+    scene bg school with fade
+    show maks neitral with dissolve
+    Maksim "...."
+    "Вы" "Что случилось?"
+    Maksim "У нашего кампуса ворота?"
+    show maks smile with dissolve
+    "Вы" "А как ты хотела, изсходя из нашей работы, мы на охраняемой территории."
+    Maksim "Понятненько."
+    "Вы" "Идём"
+
+    hide maks smile with dissolve
+    scene bg rest_room with fade
+
+    Maksim "А у нас красивый номер."
+    "Вы" "Есть такое."
+    Maksim "Я посмотрю свою комнату."
+    "Вы" "Ок. Я пойду умоюсь и руки заодно помою."
+    Maksim "Хорошо"
+
+    scene bg bath_room with fade
+    "..."
+    "Поидее нам предстоит познакомится с пациентами"
+    "Вы" "Как же зовут опекаемую.."
+    "Вы" "Арина? Арианна? Ари.."
+    Maksim "Твой пациент Ариель."
+    "Вы" "Да, точно, спасибо."
+    "Вы" "Я немного устал, пойду отдохну"
+    Maksim "Давай, давай."
+
+    scene bg hero_room with fade
+    "А у меня неплохая комната"
+    "Вздремну пожалуй чу-чуть"    
